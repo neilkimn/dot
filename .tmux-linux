@@ -1,6 +1,9 @@
 # Improve colors
 set -g default-terminal "xterm-256color"
 
+# Repeat time delay set to 0
+set-option -g repeat-time 0
+
 # Set scrollback buffer to 10000
 set -g history-limit 10000
 
