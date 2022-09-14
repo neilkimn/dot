@@ -42,11 +42,8 @@ bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
 # Enable mouse control (clickable windows, panes, resizable panes)
-set -g mouse-select-window on
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
-set -g mode-mouse on
 #bind-key m mouse-select-window\; display-message "mouse-mode is now #{?mouse-select-window,on,off}"
+set -g mouse on
 
 
 # enable vi mode keys
@@ -55,9 +52,10 @@ set-window-option -g mode-keys vi
 # statusbar
 set -g status-position bottom
 set -g status-justify left
+set-window-option -g window-status-current-style bg=blue
 #set -g status-style 'bg=colour18 fg=colour4'
 set -g status-left ''
-set -g status-right '#[fg=colour18,bg=colour4] %d/%m #[fg=colour4,bg=colour18] %H:%M:%S '
+#set -g status-right '#[fg=colour18,bg=colour4] %d/%m #[fg=colour4,bg=colour18] %H:%M:%S '
 set -g status-right-length 50
 set -g status-left-length 20
 
