@@ -68,8 +68,6 @@ set softtabstop=4
 set shiftwidth=2        " number of spaces to use for auto indent
 set smartindent          " copy indent from current line when starting a new line
 
-:set number
-
 "This unsets the "last search pattern" register by hitting return"
 nnoremap <CR> :noh<CR><CR>
 
@@ -79,4 +77,12 @@ set backspace=indent,eol,start
 set ruler                           " show line and column number
 syntax on               " syntax highlighting
 set showcmd             " show (partial) command in status line
+
+set term=screen-256color
+
+set number
+
+syntax enable
+
+colorscheme ron
 
