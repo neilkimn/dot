@@ -57,7 +57,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [ $HOSTNAME = 'dasyaadm-DGX-Station-A100-920-23487-2530-000' ]; then
+      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@DGX\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -89,7 +93,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -la'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -116,44 +120,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# include following in .bashrc / .bash_profile / .zshrc
-# usage
-# $ mkvenv myvirtualenv # creates venv under ~/.venv/
-# $ venv myvirtualenv   # activates venv
-# $ deactivate          # deactivates venv
-# $ rmvenv myvirtualenv # removes venv
-
-export VENV_HOME="$HOME/.venv"
-[[ -d $VENV_HOME ]] || mkdir $VENV_HOME
-
-lsvenv() {
-  ls -1 $VENV_HOME
-}
-
-venv() {
-  if [ $# -eq 0 ]
-    then
-      echo "Please provide venv name"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda/etc/profile.d/conda.sh"
     else
-      source "$VENV_HOME/$1/bin/activate"
-  fi
-}
+        export PATH="/opt/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-mkvenv() {
-  if [ $# -eq 0 ]
-    then
-      echo "Please provide venv name"
-    else
-      python3 -m venv $VENV_HOME/$1
-  fi
-}
-
-rmvenv() {
-  if [ $# -eq 0 ]
-    then
-      echo "Please provide venv name"
-    else
-      rm -r $VENV_HOME/$1
-  fi
-}
