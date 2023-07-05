@@ -1,0 +1,88 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.startupEditor": "none",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.enablePreview": false,
+  "jupyter.askForKernelRestart": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "extensions.ignoreRecommendations": true,
+  "git.confirmSync": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "diffEditor.maxComputationTime": 0,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "debug.inlineValues": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.renderWhitespace": "trailing",
+  "editor.showFoldingControls": "always",
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "off",
+  "files.associations": {
+    "*.json": "jsonc",
+    ".pydocstyle": "ini"
+  },
+  "editor.minimap.enabled": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.mypy_cache": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "*/.pyc": true,
+    "*/.bak": true,
+    "**/_pycache_": true,
+    "**/.cache": true,
+    "**/.tox": true,
+    "*/.egg-info": true,
+    "**/.eggs": true,
+    "**/.ropeproject": true,
+    "**/.pytest_cache": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "python.languageServer": "Pylance",
+  "python.linting.lintOnSave": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "workbench.editor.closeOnFileDelete": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "jupyter.jupyterServerType": "local",
+  "python.linting.flake8Args": ["--max-line-length=88"],
+  "editor.minimap.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"]
+}
